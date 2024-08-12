@@ -36,6 +36,10 @@
           <h1 class="title is-1 publication-title">Open3DS</h1>
           <h3 class="title is-3 publication-title">: Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space</h3>
           <div class="is-size-5 publication-authors">
+            <img src="./template/figures/undercon.png" width="7%">
+            </span>
+            <br>
+            <p style="font-size:18px">We're currently working on this page. Please check back soon.</p><hr></span>
             <span class="author-block"> <p style="font-size:23px">
               Hyunjee Lee&#42;, 
               Youngsik Yun&#42;, 
@@ -87,9 +91,28 @@
     </div>
   </div>
 </section>
+<br>
+<br>
 
 
 <section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container has-text-centered">
+        <h4 class="is-size-4"><b>TL;DR: </b> Reconsideration of how radiance fields are understood in 3D space </h4> <br><br><br>
+          <figure>
+            <img src="./template/figures/Teaser.png" width="50%">
+          </figure>
+          <p style="margin-bottom: 40px;margin-top: 40px;">
+            Previous studies have trained the language fields in a 2D space, lacking direct 3D semantic supervision. 
+            Meanwhile, we propose a method to directly supervise the embeddings in 3D space, achieving accurate segmentation results.
+        </p>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
     <div class="hero-body">
       <div class="container is-max-desktop">
          <div class="container has-text-centered">
@@ -106,7 +129,7 @@
     </div>
 </section>
 <br>
-<br>
+<br> -->
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -173,6 +196,46 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
+        <h3 class="title is-3"> 3D Segmentation Results</h3>
+        <p style="margin-bottom: 40px;margin-top: 40px;">
+          <b>Qualitative comparisons of 3D segmentation on the LERF and Replica datasets.</b>
+          We show an exported mesh of 3D querying results for the given text query. 
+          <figure>
+            <img src="./template/figures/3d_seg.png"/>
+          </figure>
+        </p>
+      </div> 
+    </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container has-text-centered">
+        <h3 class="title is-3"> 2D Segmentation Results</h3>
+        <p style="margin-bottom: 40px;margin-top: 40px;">
+          <b>Qualitative Comparisons of 2D Segmentation on LERF and 3D-OVS Dataset.</b>
+          We show a heatmap of the similarity for the given text query. We dim the background except for the target object, for better visualization.
+          <figure>
+            <img src="./template/figures/2d_seg.png"/>
+          </figure>
+        </p>
+      </div> 
+    </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container has-text-centered">
         <h3 class="title is-3"> 3D segmentation Results</h3>
         <p style="margin-bottom: 40px;margin-top: 40px;">
           We compare qualitative results of 3D segmentation <b>by exporting a mesh</b> using a Poisson algorithm 
@@ -231,7 +294,7 @@
 </section>
 <br>
 <br>
-<br>
+<br> -->
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -258,16 +321,8 @@
   <div class="container is-max-desktop">
       <h4 class="title is-4" style="padding-left:30px; padding-top:30px"> Citation </h4>
           <pre id="codecell0">
-          @article{Kim2024Sync,
-            author = {Kim, Seoha and Bae, Jeongmin and Yun, Youngsik and Lee, Hahyun and Bang, Gun and Uh, Youngjung},
-            year = {2024},
-            month = {03},
-            pages = {2777-2785},
-            title = {Sync-NeRF: Generalizing Dynamic NeRFs to Unsynchronized Videos},
-            volume = {38},
-            journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
-            doi = {10.1609/aaai.v38i3.28057} 
-          } </pre>
+          
+          </pre>
   </div>
 </section>
 
