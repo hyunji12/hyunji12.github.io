@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Open3DS: Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space">
+  <meta name="keywords" content="3D Open-vocabulary Segmentation, 3D Point Querying, 3D Supervision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open3DS</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./Open3DS_static_submission/css/bulma.min.css">
+  <link rel="stylesheet" href="./Open3DS_static_submission/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./Open3DS_static_submission/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./Open3DS_static_submission/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./Open3DS_static_submission/css/index.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./Open3DS_static_submission/js/fontawesome.all.min.js"></script>
+  <script src="./Open3DS_static_submission/js/bulma-carousel.min.js"></script>
+  <script src="./Open3DS_static_submission/js/bulma-slider.min.js"></script>
+  <script src="./Open3DS_static_submission/js/index.js"></script>
+  
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-half-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Open3DS</h1>
+          <h3 class="title is-3 publication-title">: Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> <p style="font-size:23px">
+              Hyunjee Lee&#42;, 
+              Youngsik Yun&#42;, 
+              Jeongmin Bae, 
+              Seoha Kim, 
+              Youngjung Uh</p>
+            </span>
+              <br>
+              <p style="font-size:18px">* equal contribution</p></span>
+              <span class="author-block">
+                <p style="font-size:23px">Yonsei University</p></span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- ArXiv Link. -->
+              <span class="link-block">
+                <a target="_blank" href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a target="_blank" href="https://github.com/hyunji12/Open3DS/tree/main"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <!-- <i class="fa-brands fa-google-drive"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M339 314.9L175.4 32h161.2l163.6 282.9H339zm-137.5 23.6L120.9 480h310.5L512 338.5H201.5zM154.1 67.4L0 338.5 80.6 480 237 208.8 154.1 67.4z"/></svg>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+         <div class="container has-text-centered">
+          <h4 class="is-size-4"><b>TL;DR: </b> Reconsideration of how radiance fields are understood in 3D space </h4>
+            <br>
+          <div class="columns vertical_center">
+            <video poster="" autoplay controls muted loop playsinline height="100%">
+              <source src="./Open3DS_static_submission/figures/blue_dish_soap.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<br>
+<br>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-3">Abstract</h3>
+            <p style="margin-bottom: 40px;margin-top: 40px;">
+              Understanding 3D semantics of a scene is a fundamental problem for various scenarios such as embodied agents. While NeRFs and 3DGS excel at novel-view synthesis, 
+              previous methods for understanding their semantics have been limited to 2D understanding: their segmentation results are 2D masks and their ground truth is language 
+              embeddings anchored at 2D pixels. This paper revisits the problem setting to pursue the true 3D understanding of a scene modeled by NeRFs and 3DGS as follows. 
+              1) We directly supervise the 3D points to learn language embedding field. It achieves state-of-the-art accuracy without relying on multi-scale language embeddings. 
+              2) We transferred the learned language field to 3DGS, achieving the first real-time rendering speed without sacrificing training time or accuracy. 
+              3) We introduce a 3D querying and evaluation protocol for assessing the reconstructed geometry and semantics together. 
+            </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-3">Method Overview</h3>
+            <figure>
+              <img src="./Open3DS_static_submission/figures/overview.png"/>
+            </figure>
+            <p style="margin-bottom: 40px;margin-top: 40px;">
+              We mask and crop every object in multi-view images, then pass them through the CLIP encoder to create scale-free ground truth embeddings. 
+              Then we apply <b>pointwise semantic loss to supervise the sampled point embeddings in langauge fields.</b>
+              Furthermore, the learned language fields can be transferred into 3DGS <b>for faster rendering speeds. (Open3DS <i>3DGS</i>)</b>
+              For querying each 3D and 2D segmentation, we calculate the relevancy score with the given text using the sampled point embeddings and the rendered language embeddings. 
+              Lastly, <b>our 3D evaluation protocol</b> measures the 3D segmentation performance <b>both in reconstructed geometry and semantics.</b>
+            </p>
+        </div>
+      </div>
+    </div>
+</section>
+<br>
+<br>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container has-text-centered">
+        <h3 class="title is-3"> Quantitative Results</h3>
+        <p style="margin-bottom: 40px;margin-top: 40px;">
+          We compare Quantitative results of 3D and 2D segmentation in Replica dataset, LERF dataset, and 3D-OVS. 
+          <figure>
+            <img src="./Open3DS_static_submission/figures/quant.png"/>
+          </figure>
+        </p>
+      </div> 
+    </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container has-text-centered">
+        <h3 class="title is-3"> 3D segmentation Results</h3>
+        <p style="margin-bottom: 40px;margin-top: 40px;">
+          We compare qualitative results of 3D segmentation <b>by exporting a mesh</b> using a Poisson algorithm 
+          for the region obtained through 3D querying.
+          
+        </p>
+
+
+
+
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-set1">
+            <div class="columns vertical_center">
+              <div class="column is-one-seconds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./Open3DS_static_submission/figures/table.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item item-set2">
+            <div class="columns vertical_center">
+              <div class="column is-one-thirds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./Open3DS_static_submission/figures/table.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item item-set3">
+            <div class="columns vertical_center">
+              <div class="column is-one-thirds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./Open3DS_static_submission/figures/table.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h3 class="title is-3">Real-time Rendering with Open3DS <i>3DGS</i></h3>
+          <p style="margin-bottom: 40px;margin-top: 40px;">
+            Our transferred 3DGS from the pre-trained language field achieves <b>the first real-time rendering speed</b> of segmentation, 
+            <br>which is <b>27x faster</b> than the previous fastest method.
+          </p>
+          <figure>
+            <img src="./Open3DS_static_submission/figures/comp_cost.png"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+      <h4 class="title is-4" style="padding-left:30px; padding-top:30px"> Citation </h4>
+          <pre id="codecell0">
+          @article{Kim2024Sync,
+            author = {Kim, Seoha and Bae, Jeongmin and Yun, Youngsik and Lee, Hahyun and Bang, Gun and Uh, Youngjung},
+            year = {2024},
+            month = {03},
+            pages = {2777-2785},
+            title = {Sync-NeRF: Generalizing Dynamic NeRFs to Unsynchronized Videos},
+            volume = {38},
+            journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+            doi = {10.1609/aaai.v38i3.28057} 
+          } </pre>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
