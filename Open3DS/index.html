@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Open3DS: Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space">
+        content="Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space">
   <meta name="keywords" content="3D Open-vocabulary Segmentation, 3D Point Querying, 3D Supervision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Open3DS</title>
@@ -33,8 +33,7 @@
     <div class="container is-half-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Open3DS</h1>
-          <h3 class="title is-3 publication-title">: Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space</h3>
+          <h2 class="title is-2 publication-title"><p style="line-height:140%">Rethinking Open-Vocabulary Segmentation<br>of Radiance Fields in 3D Space</h2></p>
           <div class="is-size-5 publication-authors">
             <img src="./template/figures/undercon.png" width="7%" />
             </span>
@@ -136,12 +135,13 @@
         <div class="column has-text-centered">
           <h3 class="title is-3">Abstract</h3>
             <p style="margin-bottom: 40px;margin-top: 40px;">
-              Understanding 3D semantics of a scene is a fundamental problem for various scenarios such as embodied agents. While NeRFs and 3DGS excel at novel-view synthesis, 
-              previous methods for understanding their semantics have been limited to 2D understanding: their segmentation results are 2D masks and their ground truth is language 
-              embeddings anchored at 2D pixels. This paper revisits the problem setting to pursue the true 3D understanding of a scene modeled by NeRFs and 3DGS as follows. 
-              1) We directly supervise the 3D points to learn language embedding field. It achieves state-of-the-art accuracy without relying on multi-scale language embeddings. 
-              2) We transferred the learned language field to 3DGS, achieving the first real-time rendering speed without sacrificing training time or accuracy. 
-              3) We introduce a 3D querying and evaluation protocol for assessing the reconstructed geometry and semantics together. 
+              Understanding 3D semantics of a scene is a fundamental problem for various scenarios such as embodied agents.
+              While NeRFs and 3DGS excel at novel-view synthesis, previous methods for understanding their semantics have been limited to incomplete 3D understanding: 
+              their segmentation results are 2D masks and their supervision is anchored at 2D pixels.
+              <b>This paper revisits the problem setting to pursue a better 3D understanding of a scene modeled by NeRFs and 3DGS</b> as follows. 
+              1) We directly supervise the 3D points to train the language embedding field. It achieves state-of-the-art accuracy without relying on multi-scale language embeddings. 
+              2) We transfer the pre-trained language field to 3DGS, achieving the first real-time rendering speed without sacrificing training time or accuracy. 
+              3) We introduce a 3D querying and evaluation protocol for assessing the reconstructed geometry and semantics together.
             </p>
         </div>
       </div>
@@ -160,7 +160,7 @@
             <p style="margin-bottom: 40px;margin-top: 40px;">
               We mask and crop every object in multi-view images, then pass them through the CLIP encoder to create scale-free ground truth embeddings. 
               Then we apply <b>pointwise semantic loss to supervise the sampled point embeddings in langauge fields.</b>
-              Furthermore, the learned language fields can be transferred into 3DGS <b>for faster rendering speeds. (Open3DS <i>3DGS</i>)</b>
+              Furthermore, the learned language fields can be transferred into 3DGS <b>for faster rendering speeds.</b>
               For querying each 3D and 2D segmentation, we calculate the relevancy score with the given text using the sampled point embeddings and the rendered language embeddings. 
               Lastly, <b>our 3D evaluation protocol</b> measures the 3D segmentation performance <b>both in reconstructed geometry and semantics.</b>
             </p>
@@ -299,7 +299,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h3 class="title is-3">Real-time Rendering with Open3DS <i>3DGS</i></h3>
+          <h3 class="title is-3">Real-time Rendering with Ours-<i>3DGS</i></h3>
           <p style="margin-bottom: 40px;margin-top: 40px;">
             Our transferred 3DGS from the pre-trained language field achieves <b>the first real-time rendering speed</b> of segmentation, 
             <br>which is <b>27x faster</b> than the previous fastest method.
