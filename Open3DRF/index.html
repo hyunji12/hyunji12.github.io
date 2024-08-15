@@ -55,7 +55,7 @@
             <div class="publication-links">
               <!-- ArXiv Link. -->
               <span class="link-block">
-                <a target="_blank" href=""
+                <a target="_blank" href="https://arxiv.org/abs/2408.07416"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -78,7 +78,6 @@
                 <a target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <!-- <i class="fa-brands fa-google-drive"></i> -->
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M339 314.9L175.4 32h161.2l163.6 282.9H339zm-137.5 23.6L120.9 480h310.5L512 338.5H201.5zM154.1 67.4L0 338.5 80.6 480 237 208.8 154.1 67.4z"/></svg>
                   </span>
                   <span>Data</span>
@@ -96,13 +95,13 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
-        <h4 class="is-size-4"><b>TL;DR: </b> Reconsideration of how radiance fields are understood in 3D space </h4> <br><br><br>
           <figure>
-            <img src="./template/figures/Teaser.png" width="50%" />
+            <img src="./template/figures/teaser.png" width="50%" />
           </figure>
           <p style="margin-bottom: 40px;margin-top: 40px;">
-            Previous studies have trained the language fields in a 2D space, lacking direct 3D semantic supervision. 
-            Meanwhile, we propose a method to directly supervise the embeddings in 3D space, achieving accurate segmentation results.
+            Previous works segment 2D masks on rendered images to understand radiance fields. 
+            Instead, we reformulate the task to segment 3D volumes. 
+            Our approach greatly improves 3D and 2D understanding of radiance fields. 
         </p>
       </div> 
     </div>
@@ -113,8 +112,6 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
          <div class="container has-text-centered">
-          <h4 class="is-size-4"><b>TL;DR: </b> Reconsideration of how radiance fields are understood in 3D space </h4>
-            <br>
           <div class="columns vertical_center">
             <video poster="" autoplay controls muted loop playsinline height="100%">
               <source src="./template/figures/blue_dish_soap.mp4"
@@ -135,10 +132,10 @@
         <div class="column has-text-centered">
           <h3 class="title is-3">Abstract</h3>
             <p style="margin-bottom: 40px;margin-top: 40px;">
-              Understanding 3D semantics of a scene is a fundamental problem for various scenarios such as embodied agents.
+              Understanding the 3D semantics of a scene is a fundamental problem for various scenarios such as embodied agents.
               While NeRFs and 3DGS excel at novel-view synthesis, previous methods for understanding their semantics have been limited to incomplete 3D understanding: 
               their segmentation results are 2D masks and their supervision is anchored at 2D pixels.
-              <b>This paper revisits the problem setting to pursue a better 3D understanding of a scene modeled by NeRFs and 3DGS</b> as follows. 
+              This paper <b>revisits the problem set to pursue a better 3D understanding of a scene modeled by NeRFs and 3DGS</b> as follows. 
               1) We directly supervise the 3D points to train the language embedding field. It achieves state-of-the-art accuracy without relying on multi-scale language embeddings. 
               2) We transfer the pre-trained language field to 3DGS, achieving the first real-time rendering speed without sacrificing training time or accuracy. 
               3) We introduce a 3D querying and evaluation protocol for assessing the reconstructed geometry and semantics together.
@@ -158,11 +155,10 @@
               <img src="./template/figures/overview.png"/>
             </figure>
             <p style="margin-bottom: 40px;margin-top: 40px;">
-              We mask and crop every object in multi-view images, then pass them through the CLIP encoder to create scale-free ground truth embeddings. 
-              Then we apply <b>pointwise semantic loss to supervise the sampled point embeddings in langauge fields.</b>
-              Furthermore, the learned language fields can be transferred into 3DGS <b>for faster rendering speeds.</b>
-              For querying each 3D and 2D segmentation, we calculate the relevancy score with the given text using the sampled point embeddings and the rendered language embeddings. 
-              Lastly, <b>our 3D evaluation protocol</b> measures the 3D segmentation performance <b>both in reconstructed geometry and semantics.</b>
+              We propose <b>3D segmentation</b> as a more practical problem setting, segmenting the 3D volume for a given text query.
+              Then we propose <b>point-wise semantic loss to supervise the sampled point embeddings.</b>
+              Furthermore, the learned language fields can be <b>transferred into 3DGS for faster rendering speeds.</b>
+              Lastly, <b>our 3D evaluation protocol</b> measures the 3D segmentation performance both in reconstructed geometry and semantics.
             </p>
         </div>
       </div>
@@ -177,7 +173,7 @@
       <div class="container has-text-centered">
         <h3 class="title is-3"> Quantitative Results</h3>
         <p style="margin-bottom: 40px;margin-top: 40px;">
-          We compare Quantitative results of 3D and 2D segmentation in Replica dataset, LERF dataset, and 3D-OVS. 
+          We compare quantitative results of 3D and 2D segmentation in Replica dataset, LERF dataset, and 3D-OVS. 
           <figure>
             <img src="./template/figures/quant.png"/>
           </figure>
@@ -198,6 +194,7 @@
         <p style="margin-bottom: 40px;margin-top: 40px;">
           <b>Qualitative comparisons of 3D segmentation on the LERF and Replica datasets.</b>
           We show an exported mesh of 3D querying results for the given text query. 
+          Unlike competitors, our method produces more clear boundaries in 3D segmentation results. 
           <figure>
             <img src="./template/figures/3d_seg.png"/>
           </figure>
@@ -218,6 +215,7 @@
         <p style="margin-bottom: 40px;margin-top: 40px;">
           <b>Qualitative Comparisons of 2D Segmentation on LERF and 3D-OVS Dataset.</b>
           We show a heatmap of the similarity for the given text query. We dim the background except for the target object, for better visualization.
+          Our method achieves accurate segmentation results in 2D compared to competitors.
           <figure>
             <img src="./template/figures/2d_seg.png"/>
           </figure>
@@ -315,14 +313,21 @@
 <br>
 <br>
 
-<!-- <section class="hero is-small">
+<section class="hero is-small">
   <div class="container is-max-desktop">
       <h4 class="title is-4" style="padding-left:30px; padding-top:30px"> Citation </h4>
           <pre id="codecell0">
-          
-          </pre>
+          @misc{lee2024rethinkingopenvocabularysegmentationradiance,
+          title={Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space}, 
+          author={Hyunjee Lee and Youngsik Yun and Jeongmin Bae and Seoha Kim and Youngjung Uh},
+          year={2024},
+          eprint={2408.07416},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV},
+          url={https://arxiv.org/abs/2408.07416}, 
+          } </pre>
   </div>
-</section> -->
+</section>
 
 <br>
 <br>
