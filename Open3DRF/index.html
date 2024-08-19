@@ -186,7 +186,7 @@
 <br>
 <br>
 
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
@@ -201,6 +201,113 @@
         </p>
       </div> 
     </div>
+  </div>
+</section>
+<br>
+<br>
+<br> -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container has-text-centered">
+        <h3 class="title is-3"> 3D segmentation Results</h3>
+        <p style="margin-bottom: 40px;margin-top: 40px;">
+          <b>Qualitative comparisons of 3D segmentation on the LERF and Replica datasets.</b>
+          We show an exported mesh of 3D querying results for the given text query. 
+          Unlike competitors, our method produces more clear boundaries in 3D segmentation results. 
+        </p>
+
+
+
+
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-set1">
+            <div class="columns vertical_center">
+              <div class="column is-one-seconds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./template/figures/paper_towel_roll.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item item-set2">
+            <div class="columns vertical_center">
+              <div class="column is-one-thirds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./template/figures/porcelain_hand.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item item-set3">
+            <div class="columns vertical_center">
+              <div class="column is-one-thirds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./template/figures/rubber_duck.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-set4">
+            <div class="columns vertical_center">
+              <div class="column is-one-seconds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./template/figures/chopsticks.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item item-set5">
+            <div class="columns vertical_center">
+              <div class="column is-one-thirds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./template/figures/table.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item item-set6">
+            <div class="columns vertical_center">
+              <div class="column is-one-thirds">
+                <div class="column">
+                  <figure>
+                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                      <source src="./template/figures/bin.mp4" type="video/mp4">
+                    </video>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> 
+      </div>
   </div>
 </section>
 <br>
@@ -228,69 +335,7 @@
 <br>
 <br>
 
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="container has-text-centered">
-        <h3 class="title is-3"> 3D segmentation Results</h3>
-        <p style="margin-bottom: 40px;margin-top: 40px;">
-          We compare qualitative results of 3D segmentation <b>by exporting a mesh</b> using a Poisson algorithm 
-          for the region obtained through 3D querying.
-          
-        </p>
 
-
-
-
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-set1">
-            <div class="columns vertical_center">
-              <div class="column is-one-seconds">
-                <div class="column">
-                  <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                      <source src="./template/figures/table.mp4" type="video/mp4">
-                    </video>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="item item-set2">
-            <div class="columns vertical_center">
-              <div class="column is-one-thirds">
-                <div class="column">
-                  <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                      <source src="./template/figures/table.mp4" type="video/mp4">
-                    </video>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="item item-set3">
-            <div class="columns vertical_center">
-              <div class="column is-one-thirds">
-                <div class="column">
-                  <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
-                      <source src="./template/figures/table.mp4" type="video/mp4">
-                    </video>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> 
-      </div>
-  </div>
-</section>
-<br>
-<br>
-<br> -->
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -300,7 +345,7 @@
           <h3 class="title is-3">Real-time Rendering with Ours-<i>3DGS</i></h3>
           <p style="margin-bottom: 40px;margin-top: 40px;">
             Our transferred 3DGS from the pre-trained language field achieves <b>the first real-time rendering speed</b> of segmentation, 
-            <br>which is <b>27x faster</b> than the previous fastest method.
+            <br>which is <b>28x faster</b> than the previous fastest method.
           </p>
           <figure>
             <img src="./template/figures/comp_cost.png"/>
@@ -316,16 +361,16 @@
 <section class="hero is-small">
   <div class="container is-max-desktop">
       <h4 class="title is-4" style="padding-left:30px; padding-top:30px"> Citation </h4>
-          <pre id="codecell0">
-          @misc{lee2024open3drf,
-          title={Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space}, 
-          author={Hyunjee Lee and Youngsik Yun and Jeongmin Bae and Seoha Kim and Youngjung Uh},
-          year={2024},
-          eprint={2408.07416},
-          archivePrefix={arXiv},
-          primaryClass={cs.CV},
-          url={https://arxiv.org/abs/2408.07416}, 
-          } </pre>
+<pre id="codecell0">
+@misc{lee2024open3drf,
+title={Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space}, 
+author={Hyunjee Lee and Youngsik Yun and Jeongmin Bae and Seoha Kim and Youngjung Uh},
+year={2024},
+eprint={2408.07416},
+archivePrefix={arXiv},
+primaryClass={cs.CV},
+url={https://arxiv.org/abs/2408.07416}, 
+} </pre>
   </div>
 </section>
 
