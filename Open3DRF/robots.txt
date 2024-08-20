@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hyunji12.github.io/Open3DRF/sitemap.xml
