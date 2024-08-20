@@ -35,10 +35,6 @@
         <div class="column has-text-centered">
           <h2 class="title is-2 publication-title"><p style="line-height:140%">Rethinking Open-Vocabulary Segmentation<br>of Radiance Fields in 3D Space</h2></p>
           <div class="is-size-5 publication-authors">
-            <!-- <img src="./template/figures/undercon.png" width="7%" />
-            </span>
-            <br>
-            <p style="font-size:18px">We're currently working on this page. Please check back soon.</p><hr></span> -->
             <span class="author-block"> <p style="font-size:23px">
               Hyunjee Lee&#42;, 
               Youngsik Yun&#42;, 
@@ -90,28 +86,10 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="container has-text-centered">
-          <figure>
-            <img src="./template/figures/Teaser.png" width="50%" />
-          </figure>
-          <p style="margin-bottom: 40px;margin-top: 40px;">
-            Previous works segment 2D masks on rendered images to understand radiance fields. 
-            Instead, we reformulate the task to segment 3D volumes. 
-            Our approach greatly improves 3D and 2D understanding of radiance fields. 
-        </p>
-      </div> 
-    </div>
-  </div>
-</section> -->
-
 <section class="hero teaser">
     <div class="hero-body">
       <div class="container is-max-desktop">
          <div class="container has-text-centered">
-          <!-- <div class="columns vertical_center"> -->
             <video poster="" autoplay controls muted loop playsinline height="100%" width="70%">
               <source src="./template/figures/Teaser-video.mp4"
                       type="video/mp4">
@@ -175,11 +153,12 @@
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
         <h3 class="title is-3"> Quantitative Results</h3>
+        <figure>
+          <img src="./template/figures/quant.png" width="80%"/>
+        </figure>
         <p style="margin-bottom: 40px;margin-top: 40px;">
-          We compare quantitative results of 3D and 2D segmentation in Replica dataset, LERF dataset, and 3D-OVS. 
-          <figure>
-            <img src="./template/figures/quant.png" width="80%"/>
-          </figure>
+          We compare quantitative results of 3D and 2D segmentation in Replica dataset, LERF dataset, and 3D-OVS.
+          Red and orange highlights indicate the 1st, and 2nd-best model. <b>We achieve state-of-the-art segmentation accuracy in both 3D and 2D.</b> 
         </p>
       </div> 
     </div>
@@ -188,41 +167,13 @@
 <br>
 <br>
 
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="container has-text-centered">
-        <h3 class="title is-3"> 3D Segmentation Results</h3>
-        <p style="margin-bottom: 40px;margin-top: 40px;">
-          <b>Qualitative comparisons of 3D segmentation on the LERF and Replica datasets.</b>
-          We show an exported mesh of 3D querying results for the given text query. 
-          Unlike competitors, our method produces more clear boundaries in 3D segmentation results. 
-          <figure>
-            <img src="./template/figures/3d_seg.png"/>
-          </figure>
-        </p>
-      </div> 
-    </div>
-  </div>
-</section>
-<br>
-<br>
-<br> -->
 
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
         <h3 class="title is-3"> 3D segmentation Results</h3>
-        <p style="margin-bottom: 40px;margin-top: 40px;">
-          <b>Qualitative comparisons of 3D segmentation on the LERF and Replica datasets.</b>
-          We show an exported mesh of 3D querying results for the given text query. 
-          Unlike competitors, our method produces more clear boundaries in 3D segmentation results. 
-        </p>
-
-
-
-
+        
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-set1">
             <div class="columns vertical_center">
@@ -309,6 +260,11 @@
           </div>
 
         </div> 
+        <p style="margin-bottom: 40px;margin-top: 40px;">
+          <b>Qualitative comparisons of 3D segmentation on the LERF and Replica datasets.</b>
+          We show an exported mesh of 3D querying results for the given text query. 
+          Unlike competitors, our method produces more clear boundaries in 3D segmentation results. 
+        </p>
       </div>
   </div>
 </section>
@@ -321,13 +277,13 @@
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
         <h3 class="title is-3"> 2D Segmentation Results</h3>
+        <figure>
+          <img src="./template/figures/2d_seg.png" width="80%"/>
+        </figure>
         <p style="margin-bottom: 40px;margin-top: 40px;">
           <b>Qualitative Comparisons of 2D Segmentation on LERF and 3D-OVS Dataset.</b>
           We show a heatmap of the similarity for the given text query. We dim the background except for the target object, for better visualization.
           Our method achieves accurate segmentation results in 2D compared to competitors.
-          <figure>
-            <img src="./template/figures/2d_seg.png" width="80%"/>
-          </figure>
         </p>
       </div> 
     </div>
@@ -342,13 +298,13 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h3 class="title is-3">Real-time Rendering with Ours-<i>3DGS</i></h3>
+          <figure>
+            <img src="./template/figures/comp_cost.png" width="85%" />
+          </figure>
           <p style="margin-bottom: 40px;margin-top: 40px;">
             Our transferred 3DGS from the pre-trained language field achieves <b>the first real-time rendering speed</b> of segmentation, 
             <br>which is <b>28x faster</b> than the previous fastest method.
           </p>
-          <figure>
-            <img src="./template/figures/comp_cost.png" width="85%" />
-          </figure>
         </div>
       </div>
     </div>
