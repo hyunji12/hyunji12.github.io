@@ -35,10 +35,10 @@
         <div class="column has-text-centered">
           <h2 class="title is-2 publication-title"><p style="line-height:140%">Rethinking Open-Vocabulary Segmentation<br>of Radiance Fields in 3D Space</h2></p>
           <div class="is-size-5 publication-authors">
-            <img src="./template/figures/undercon.png" width="7%" />
+            <!-- <img src="./template/figures/undercon.png" width="7%" />
             </span>
             <br>
-            <p style="font-size:18px">We're currently working on this page. Please check back soon.</p><hr></span>
+            <p style="font-size:18px">We're currently working on this page. Please check back soon.</p><hr></span> -->
             <span class="author-block"> <p style="font-size:23px">
               Hyunjee Lee&#42;, 
               Youngsik Yun&#42;, 
@@ -89,9 +89,8 @@
     </div>
   </div>
 </section>
-<br>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="container has-text-centered">
@@ -106,24 +105,28 @@
       </div> 
     </div>
   </div>
-</section>
+</section> -->
 
-<!-- <section class="hero teaser">
+<section class="hero teaser">
     <div class="hero-body">
       <div class="container is-max-desktop">
          <div class="container has-text-centered">
-          <div class="columns vertical_center">
-            <video poster="" autoplay controls muted loop playsinline height="100%">
-              <source src="./template/figures/blue_dish_soap.mp4"
+          <!-- <div class="columns vertical_center"> -->
+            <video poster="" autoplay controls muted loop playsinline height="100%" width="70%">
+              <source src="./template/figures/Teaser-video.mp4"
                       type="video/mp4">
             </video>
-          </div>
+            <p style="margin-bottom: 40px;margin-top: 40px;">
+            Previous works segment 2D masks on rendered images to understand radiance fields. 
+            Instead, we <b>reformulate the task to segment 3D volumes. </b>
+            Our approach greatly improves 3D and 2D understanding of radiance fields. 
+            </p>
+          <!-- </div> -->
         </div>
       </div>
     </div>
 </section>
-<br>
-<br> -->
+
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -144,6 +147,7 @@
       </div>
     </div>
 </section>
+<br>
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -152,7 +156,7 @@
         <div class="column has-text-centered">
           <h3 class="title is-3">Method Overview</h3>
             <figure>
-              <img src="./template/figures/overview.png"/>
+              <img src="./template/figures/overview.png" width="90%"/>
             </figure>
             <p style="margin-bottom: 40px;margin-top: 40px;">
               We propose <b>3D segmentation</b> as a more practical problem setting, segmenting the 3D volume for a given text query.
@@ -165,7 +169,6 @@
     </div>
 </section>
 <br>
-<br>
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -175,14 +178,13 @@
         <p style="margin-bottom: 40px;margin-top: 40px;">
           We compare quantitative results of 3D and 2D segmentation in Replica dataset, LERF dataset, and 3D-OVS. 
           <figure>
-            <img src="./template/figures/quant.png"/>
+            <img src="./template/figures/quant.png" width="80%"/>
           </figure>
         </p>
       </div> 
     </div>
   </div>
 </section>
-<br>
 <br>
 <br>
 
@@ -227,7 +229,7 @@
               <div class="column is-one-seconds">
                 <div class="column">
                   <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" width="90%">
                       <source src="./template/figures/paper_towel_roll.mp4" type="video/mp4">
                     </video>
                   </figure>
@@ -241,7 +243,7 @@
               <div class="column is-one-thirds">
                 <div class="column">
                   <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" width="90%">
                       <source src="./template/figures/porcelain_hand.mp4" type="video/mp4">
                     </video>
                   </figure>
@@ -255,7 +257,7 @@
               <div class="column is-one-thirds">
                 <div class="column">
                   <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" width="90%">
                       <source src="./template/figures/rubber_duck.mp4" type="video/mp4">
                     </video>
                   </figure>
@@ -269,7 +271,7 @@
               <div class="column is-one-seconds">
                 <div class="column">
                   <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" width="90%">
                       <source src="./template/figures/chopsticks.mp4" type="video/mp4">
                     </video>
                   </figure>
@@ -283,7 +285,7 @@
               <div class="column is-one-thirds">
                 <div class="column">
                   <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" width="90%">
                       <source src="./template/figures/table.mp4" type="video/mp4">
                     </video>
                   </figure>
@@ -297,7 +299,7 @@
               <div class="column is-one-thirds">
                 <div class="column">
                   <figure>
-                    <video poster="" autoplay controls muted loop playsinline height="100%">
+                    <video poster="" autoplay controls muted loop playsinline height="100%" width="90%">
                       <source src="./template/figures/bin.mp4" type="video/mp4">
                     </video>
                   </figure>
@@ -324,7 +326,7 @@
           We show a heatmap of the similarity for the given text query. We dim the background except for the target object, for better visualization.
           Our method achieves accurate segmentation results in 2D compared to competitors.
           <figure>
-            <img src="./template/figures/2d_seg.png"/>
+            <img src="./template/figures/2d_seg.png" width="80%"/>
           </figure>
         </p>
       </div> 
@@ -332,9 +334,6 @@
   </div>
 </section>
 <br>
-<br>
-<br>
-
 
 
 <section class="hero is-small">
@@ -348,7 +347,7 @@
             <br>which is <b>28x faster</b> than the previous fastest method.
           </p>
           <figure>
-            <img src="./template/figures/comp_cost.png"/>
+            <img src="./template/figures/comp_cost.png" width="85%" />
           </figure>
         </div>
       </div>
@@ -363,13 +362,13 @@
       <h4 class="title is-4" style="padding-left:30px; padding-top:30px"> Citation </h4>
 <pre id="codecell0">
 @misc{lee2024open3drf,
-title={Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space}, 
-author={Hyunjee Lee and Youngsik Yun and Jeongmin Bae and Seoha Kim and Youngjung Uh},
-year={2024},
-eprint={2408.07416},
-archivePrefix={arXiv},
-primaryClass={cs.CV},
-url={https://arxiv.org/abs/2408.07416}, 
+  title={Rethinking Open-Vocabulary Segmentation of Radiance Fields in 3D Space}, 
+  author={Hyunjee Lee and Youngsik Yun and Jeongmin Bae and Seoha Kim and Youngjung Uh},
+  year={2024},
+  eprint={2408.07416},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2408.07416}, 
 } </pre>
   </div>
 </section>
