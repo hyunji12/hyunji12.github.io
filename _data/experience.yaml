@@ -1,0 +1,19 @@
+experiences:
+
+- place: "ETRI"
+  time: "2024 - Present"
+  title: "Academic-Research Cooperation"
+  subtitle: "Dynamic Scene Reconstruction Research"
+  category: "work"
+
+- place: "Yonsei University"
+  time: "2023 – Present "
+  title: "Ph.D integrated program Student"
+  subtitle: "Artificial Intelligence"
+  category: "school"
+
+- place: "Kookmin University"
+  time: "2019 - 2023"
+  title: "B.S. Student"
+  subtitle: "Software"
+  category: "school"
